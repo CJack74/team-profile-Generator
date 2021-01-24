@@ -12,7 +12,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
-
+// Arrays for new 
 const teamMembers = [];
 const idArray = [];
 
@@ -43,7 +43,7 @@ function mainMenu() {
             }
         ]).then(answers => {
             // Pushes new manager into team array
-            const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
+            const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.officeNumber);
             teamMembers.push(manager);
             idArray.push(answers.managerId);
             createTeam();
